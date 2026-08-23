@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Rocket Wiki</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Rocket Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="avionics/" class="nav-link">航电系统</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="structures/" class="nav-link">结构设计</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="propulsion/" class="nav-link">推进系统</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">仿真分析</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="simulation/" class="dropdown-item">概述</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">飞行记录</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="flight-records/index.md" class="dropdown-item">概述</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="development/" class="nav-link">开发规范</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="Mad/" class="nav-link">鬼话</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="avionics/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">火箭系统性文档仓库</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">网站概述</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">网站结构</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">协作流程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">文档目标</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<figure>
+<p><img alt="LOGO" height="400" src="assets/picture/LOGO.png" /></p>
+</figure>
+<h1 id="_1">火箭系统性文档仓库</h1>
+<p>文档AI等级：0</p>
+<p>本项目是一个面向实验火箭的系统性文档留存，用于记录火箭的设计理念，仿真数据，源代码维护，3D模型，以及各种可被文字化留存的知识</p>
+<p>目标是形成一个不需要靠口头传授就可以轻易获取的知识库，提升工作效率和协作效率</p>
+<hr />
+<h2 id="_2">网站概述</h2>
+<p>本网站以mkdocs为底层网站生成器，并使用github进行网站托管，源代码仓库为 <a href="https://github.com/SophonSnwflake/rocket-avionics-docs">仓库地址</a>。</p>
+<hr />
+<h2 id="_3">网站结构</h2>
+<p>当前网站以火箭各个系统工程的领域作为主分区依据，主要划分位以下几个区块：</p>
+<ul>
+<li><strong>结构设计</strong>：火箭的外部机械结构设计</li>
+<li><strong>航电系统</strong>：火箭的电子系统设计</li>
+<li><strong>推进系统</strong>：发动机设计以及相关资料</li>
+<li><strong>仿真分析</strong>：用于存放所有的仿真结果</li>
+<li><strong>飞行记录</strong>：以飞行航次为单位，记录每次飞行的具体数据信息</li>
+</ul>
+<hr />
+<h2 id="_4">协作流程</h2>
+<p>为了避免各成员之间的同时修改会导致git流混乱，所以本网站的修改流程采用Pull-Requset形式，每个成员需要克隆一个仓库到自己名下新建分支，将新更改在新分支下进行并提交PR。
+详细的协作流程请看：<a href="development/assets/docs_workflow/">docsWorkflow</a>。</p>
+<hr />
+<h2 id="_5">文档目标</h2>
+<p>大学内的科技社团，经常出现两种非常不好的现象，一种是老资历掌握过度话语权和解释权，另一种是周期性的技术断代。而这两种现象其实都可以指向一个共同的原因，就是团体内没有建立很好的信息记录的手段，所有的信息都只能通过口头传承和手把手教授的方式来传递，虽然说工程领域的知识并不是所有都能文字化来记录下来，但至少我们可以在面临一些重复性问题的时候不再从头走一遍之前的老路。本文档的目标是，当以后再出现一些火箭开发上面的bug或问题时，想要去找一找之前是怎么解决的，或者找一找之前的源码是怎么写的，之前的3D图是怎么画的，不需要再去找某个当年的人来问或者翻开电脑的文件夹找半天也没找到。我们只需要打开rocket.wiki，打开对应板块，就能了解到之前踩过的坑，某年某月某日的试车记录，这将会大大提升我们的协作效率和技术的可留存性。同时，记录文档的过程本身也是一种梳理思想的过程，如果你在开发中没法将你做的东西梳理成文档，那就说明你还对你开发的东西没有精确的把握和认知，可能还停留在“感觉”的层面，这时候，停下来梳理文档将是一次非常好的思维梳理过程。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-08-23 03:28:47.178072+00:00
+-->

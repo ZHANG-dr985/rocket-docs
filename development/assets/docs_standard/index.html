@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>文档写作格式规范 - Rocket Wiki</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Rocket Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../avionics/" class="nav-link">航电系统</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../structures/" class="nav-link">结构设计</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../propulsion/" class="nav-link">推进系统</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">仿真分析</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../simulation/" class="dropdown-item">概述</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">飞行记录</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../flight-records/index.md" class="dropdown-item">概述</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../" class="nav-link">开发规范</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../Mad/" class="nav-link">鬼话</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">文档写作格式规范</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1"><strong>文档写作格式规范</strong></h1>
+<p>文档AI等级：2</p>
+<h3 id="11"><strong>1.1 文档源码结构</strong></h3>
+<p>源码结构为：</p>
+<pre><code>docs/                 # 文档文件夹
+└── index.md                # 首页
+│
+└── development/             # 开发规范
+│   └── index.md                # 首页
+│   └── docs_workflow           # 文档工作流
+│   └── ....
+│
+└── structures/              # 结构性文档入口
+│   └── index.md                # 首页
+│   └── ....
+│
+└── flight_records/          # 飞行记录入口
+│   └── index.md                # 首页
+│   └── ....
+│
+└── propulsion/              # 喷气推进相关入口
+│   └── index.md                # 首页
+│   └── ....
+|
+└── simulation/              # 仿真相关入口
+│   └── index.md                # 首页
+│   └── ....
+│
+└── avionics/                # 航电系统入口
+│   └── index.md                # 首页
+│   └── ....
+│
+└── assets/                  # 图片存放处
+    └── index.md                # 首页
+    └── ....
+
+mkdocs.yml                   # mkdocs配置文件，负责网站的结构和样式
+
+</code></pre>
+<p>而我们在更改的过程中秩序在docs/文件夹下找到对应自己要更改的领域，然后新建.md文件即可</p>
+<h3 id="12"><strong>1.2 文件命名规范</strong></h3>
+<p>所有文件的命名都采用：小写字母加英文下划线的格式，例如:</p>
+<ul>
+<li><code>development/</code></li>
+<li><code>docs_workflow.md</code></li>
+<li><code>motor_test.md</code></li>
+<li><code>rocket_motor.petg</code></li>
+</ul>
+<p>但是如果涉及到较为复杂的整体性的文件夹移植，而牵扯的内部文件格式已经形成定式的时候，可以保持其内部的自己命名法则，例如源码或者3d模型文件夹，但外部的包装文件夹依旧采用上述命名格式</p>
+<h3 id="13-markdown"><strong>1.3 MarkDown写作规范</strong></h3>
+<p>.md文件内部不做过于严格的写作规范，但请尽量依照之前的文件的风格进行，并保持md文件清晰可读。</p>
+<h3 id="14-ai"><strong>1.4 AI成分标注</strong></h3>
+<p>为使文档阅读者在阅读文档是能够能清晰的了解当前文档的写作方法以及可信度，对于文字类的文档，每个文档前必须标注AI的使用等级，用于辨识此文档内AI的使用比例</p>
+<p>示例：</p>
+<pre><code>AI等级：3
+</code></pre>
+<p>现规定AI等级如下：</p>
+<ul>
+<li>0级：通篇没有使用任何的AI工具，包括但不限于使用Ai搜索资料、查重、修缮等。全文AI生成比例为0%。</li>
+<li>1级：使用了AI工具，但AI使用纯用于查找资料、翻译或基础语言，没有让AI提出任何开创性的想法或者想法的整合，相当于AI是一个更进一步的谷歌引擎。</li>
+<li>2级：使用AI工具作为数据搜索和想法建设，AI参与局部分析、思路发散、措辞优化或小范围内容生成。但文章主体结构、技术判断和结论由作者独立完成。</li>
+<li>3级：使用AI工具不断优化想法和观点，规划整体结构，作者对全文内容进行人工重构、核查并承担最终技术判断。</li>
+<li>4级：AI承担主要文本生成工作，作者主要提供核心资料和提示词</li>
+<li>5级：全部由AI生成</li>
+</ul>
+<p>AI等级并没有好坏，按真实标注即可</p>
+<h3 id="15"><strong>1.5 文档内容结构</strong></h3>
+<p>文档的组织结构以文件夹为单位，每一个具有导航意义的目录必须包含一个index.md，作为该目录的入口页面。而根据当前层级的index.md里面向下链接的按钮可以进入下层文件夹。纯资源目录（如 assets）不需要建立网页入口</p>
+<p>最终体现形式类似于树形结构</p>
+<p>以avionics（航电）文件夹作为示例来解释：</p>
+<p>avionics/
+└── index.md             # “航电”主界面的网页
+|   └── 航电总体介绍
+|   └── V1版本航电链接    # 通向v1/index.md
+|   └── V2版本航电连接    # 通向v2/index.md
+| 
+└── v1/
+|   └── assets/              # V1版本附件存放区（图片、PDF、源码等文件）
+|   └── index.md             # v1版本航电基本介绍
+|       └── 硬件系统             # 调用v1/assets内的文件
+|       └── 软件系统             # 调用v1/assets内的文件
+| 
+└── v2/
+|   └── assets/              # V2版本附件存放区（图片、PDF、源码等文件）
+|   └── index.md             # v2版本航电基本介绍
+|       └── 硬件系统             # 调用v1/assets内的文件
+|       └── 软件系统             # 调用v1/assets内的文件</p>
+<p>可以看到，在主页中显示的若干的大文件夹每个分区有一个单独的index界面，可以根据这个单独的index界面再去细分进下级的各个文件夹（V1、V2），下层的每个文件夹也各自掌握着一个index.md用于展示和链接，同时，每个文件夹都配备一个assets文件夹作为附件存储区，assets目录用于存放仅服务于当前目录文档的资源文件。</p>
+<p>建议assets内也采用多个文件夹来进行资源区分，例如picture、code、hardware</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
