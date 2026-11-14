@@ -16,6 +16,7 @@ nav:
   - 航电系统: avionics/index.md
   - 结构设计: structures/index.md
   - 推进系统: propulsion/index.md
+  - 液体火箭发动机: liquid_engine/index.md
 
   - 仿真分析:
       - 概述: simulation/index.md
